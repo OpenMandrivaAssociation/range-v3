@@ -5,7 +5,7 @@ Release: 2%{?dist}
 
 License: Boost
 URL: https://github.com/ericniebler/%{name}
-Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/%{version}.tar.gz
 BuildArch: noarch
 
 %description
