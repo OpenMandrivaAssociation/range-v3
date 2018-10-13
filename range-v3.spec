@@ -1,12 +1,12 @@
 Name: range-v3
 Summary: Experimental range library for C++11/14/17
-Version: 0.3.5
-Release: 2%{?dist}
-
+Version: 0.3.7
+Release: 1
 License: Boost
-URL: https://github.com/ericniebler/%{name}
-Source0: %{url}/archive/%{version}.tar.gz
+URL: https://github.com/ericniebler/range-v3
+Source0: https://github.com/ericniebler/range-v3/archive/%{version}.tar.gz
 BuildArch: noarch
+BuildRequires: cmake ninja
 
 %description
 Header-only %{summary}.
@@ -19,16 +19,17 @@ Provides: %{name}-static = %{version}-%{release}
 %{summary}.
 
 %prep
-%setup -q
+%autosetup -p1
+%cmake -G Ninja
 
 %build
-# Nothing to build. Header-only library.
+%ninja_build -C build
 
 %install
-# Installing headers...
-mkdir -p "%{buildroot}%{_includedir}/%{name}"
-cp -a include/* "%{buildroot}%{_includedir}/%{name}"
+%ninja_install -C build
 
 %files devel
 %doc README.md CREDITS.md TODO.md
-%{_includedir}/%{name}
+%{_includedir}/meta
+%{_includedir}/range
+%{_prefix}/lib/cmake/range-v3
