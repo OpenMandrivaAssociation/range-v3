@@ -1,6 +1,6 @@
 Name: range-v3
 Summary: Experimental range library for C++11/14/17
-Version: 0.3.7
+Version: 0.4.0
 Release: 1
 License: Boost
 URL: https://github.com/ericniebler/range-v3
