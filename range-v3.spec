@@ -22,10 +22,10 @@ Provides: %{name}-static = %{version}-%{release}
 
 %prep
 %autosetup -p1
-%cmake -G Ninja
 
 %build
-%ninja_build -C build
+%cmake -DRANGES_CXX_COMPILER_CLANGCL=ON -G Ninja
+%ninja_build
 
 %install
 %ninja_install -C build
