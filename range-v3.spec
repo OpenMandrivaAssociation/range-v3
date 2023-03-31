@@ -6,7 +6,7 @@ Summary: Experimental range library for C++11/14/17
 # do not update it
 # util you check that telegram-desktop still buildable
 Version: 0.11.0
-Release: 1
+Release: 2
 License: Boost
 URL: https://github.com/ericniebler/range-v3
 Source0: https://github.com/ericniebler/range-v3/archive/%{version}.tar.gz
