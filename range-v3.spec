@@ -5,8 +5,8 @@ Name: range-v3
 Summary: Experimental range library for C++11/14/17
 # do not update it
 # util you check that telegram-desktop still buildable
-Version: 0.11.0
-Release: 2
+Version: 0.12.0
+Release: 1
 License: Boost
 URL: https://github.com/ericniebler/range-v3
 Source0: https://github.com/ericniebler/range-v3/archive/%{version}.tar.gz
@@ -43,4 +43,4 @@ Provides: %{name}-static = %{version}-%{release}
 %{_includedir}/range
 %{_includedir}/std
 %{_includedir}/module.modulemap
-%{_prefix}/lib/cmake/range-v3
+%{_libdir}/cmake/range-v3
